@@ -1,22 +1,30 @@
 from flask import Flask,  make_response
+import csv
+import json
 
 app = Flask(__name__)
 
-dati = """
-    [
-        {"id":1, "aula": "MM2", "giorno": "2024-01-23", "ora":"10:23", "valore": "20.5" },
-        {"id":2, "aula": "MM2", "giorno": "2024-01-23", "ora":"10:23", "valore": "20.5" },
-        {"id":3, "aula": "MM2", "giorno": "2024-01-23", "ora":"10:23", "valore": "20.5" },
-        {"id":4, "aula": "MM2", "giorno": "2024-01-23", "ora":"10:23", "valore": "20.5" },
-        {"id":5, "aula": "MM2", "giorno": "2024-01-23", "ora":"10:23", "valore": "20.5" }
-    ]
-"""
+csv_file_path= 'dati.csv'
+
+
+
+def leggi_da_file():
+    dati = []
+    with open(csv_file_path,newline='') as csvfile:
+        csv_reader = csv.reader(csvfile)
+        for row in csv_reader:
+            m = {'id': row[0], 'aula': row[1],'giorno': row[2],'ora': row[3],'valore': row[4]}
+            dati.append(m)
+    return dati
 
 @app.route("/")
 def index():
+
+    data = leggi_da_file()
+
     response = app.response_class(
-        response=dati,
-        mimetype='application/json'
+        response = json.dumps(data),
+        mimetype ='application/json'
     )
     response.headers.add("Access-Control-Allow-Origin", "*")
     return response
