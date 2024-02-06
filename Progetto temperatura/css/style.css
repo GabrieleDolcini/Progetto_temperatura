@@ -1,0 +1,33 @@
+#titolo {
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 5px 10px 5px;
+}
+
+body{
+    background-image: url('../img/1430281-sfocato-nuvole-e-cielo-sfondo-gratuito-foto.jpg');
+    background-size: cover;
+    color: bisque;
+}
+
+#main-content{
+    text-align: justify;
+    font-size: larger;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    background-color: bisque;
+    color: black;
+}
+td{
+    border: 1px solid black;
+}
+
