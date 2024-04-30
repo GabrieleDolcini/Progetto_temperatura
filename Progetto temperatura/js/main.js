@@ -1,5 +1,9 @@
 const myResult = document.querySelector("#result");
 
+    const myBody = document.querySelector("body");
+    const myTable = document.querySelector("#temperatura");
+    const myTitoli = document.querySelector("#titoli");
+
     var misurazioni=[];
 
     function fetchElenco() {
@@ -9,13 +13,12 @@ const myResult = document.querySelector("#result");
         .then(data =>  {
             misurazioni = data;
             misurazioni = misurazioni_convertite();
-            myResult.append(tabella(misurazioni));
-
+            tabella(misurazioni);
             //console.log(misurazioni);
           });
       }
       
-    fetchElenco();
+    
     
     function misurazioni_convertite(){
         var convertite = [];
@@ -32,54 +35,53 @@ const myResult = document.querySelector("#result");
 
 
     function converti(g){
-        new Date(g);
+        let giorno = new Date(g);
+        giorno = giorno.toLocaleDateString('it-IT', {day:"numeric",month:"short",year:"numeric"});
     }
     function tabella(conv){
-    let lunghezza = conv.length;
+        let lunghezza = conv.length;
 
-    let table = document.createElement("table");
-    let tr_titoli = document.createElement("tr");
-    
-    // Aggiungi titoli alle colonne
-    let titoli = ['ID', 'Aula', 'Data', 'Ora', 'Valore'];
-    for (let titolo of titoli) {
-        let th = document.createElement("th");
-        th.textContent = titolo;
-        tr_titoli.appendChild(th);
-    }
-    table.appendChild(tr_titoli);
-
-    for(let j=0; j< lunghezza ;j++){
-    
-        let tr = document.createElement("tr");
-    
-        for(let i = 0; i<1; i++){        
-            for(let k = 0; k<5;k++){
-                let td = document.createElement("td");
-                switch(k){
-                    case 0:
-                        td.append(conv[j].id);
-                        break;
-                    case 1:
-                        td.append(conv[j].aula);
-                        break;
-                    case 2:
-                        td.append(conv[j].giorno);
-                        break;
-                    case 3:
-                        td.append(conv[j].ora);
-                        break;
-                    case 4:
-                        td.append(conv[j].valore);
-                        break;
-                }
-                tr.append(td);
-            }
+        let tr_titoli = document.createElement("tr");
+            
+        // Aggiunge titoli alle colonne
+        let titoli = ['ID', 'Aula', 'Data', 'Ora', 'Valore'];
+        for (let titolo of titoli) {
+            let th = document.createElement("th");
+            th.textContent = titolo;
+            tr_titoli.appendChild(th);
         }
+        myTitoli.appendChild(tr_titoli);
+        
+        for(let j=0; j< lunghezza ;j++){
+        
+            let tr = document.createElement("tr");
+               
+            for(let i = 0; i<1; i++){        
+                for(let k = 0; k<5;k++){
+                    let td = document.createElement("td");
+                    switch(k){
+                        case 0:
+                            td.append(conv[j].id);
+                            break;
+                        case 1:
+                            td.append(conv[j].aula);
+                            break;
+                        case 2:
+                            td.append(conv[j].giorno);
+                            break;
+                        case 3:
+                            td.append(conv[j].ora);
+                            break;
+                        case 4:
+                            td.append(conv[j].valore);
+                            break;
+                    }
+                    tr.append(td);
+                }
+            }
+        
+        myTable.append(tr);
+        }
+    }
     
-    table.append(tr);
-    }
-    return table;
-    }
-
-    const myBody = document.querySelector("body");
+    fetchElenco();
