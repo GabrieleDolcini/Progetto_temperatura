@@ -70,7 +70,7 @@ Le principali conclusioni del progetto includono:
 - **Affidabilità del Sistema**: Il sistema implementato si è dimostrato affidabile nel rilevare e registrare le variazioni di temperatura all'interno delle aule scolastiche.
 - **Utilità dei Dati Raccolti**: I dati di temperatura raccolti possono essere utilizzati per valutare il comfort termico degli studenti e adottare eventuali misure correttive per migliorare l'ambiente di apprendimento.
 - **Possibilità di Miglioramento**: Nonostante il successo del progetto, ci sono ancora aree di miglioramento possibili, come l'aggiunta di funzionalità avanzate all'interfaccia web (come la ricerca specifica di misurazioni nella tabella). Inoltre la misurazione delle temperature avviene per un intervallo di temppo definoto nel file 'rilevazioni_temperature.ino'
-- **Server Locale**: Per verificare il corretto funzionamento del sistema si è basato il tutto su il server "http://localhost:5000" ,ovvero al localhost. Quindi si potevano visualizzare i risultati solamente se il server è in esecuzione sul dispsitivo stesso che si sta utilizzando. Quindi abbiamo a ogni gruppo un numero di porta riservato per l'avvio del server per fare in modo che il sito web sia accessibile anche da remoto. Il nostro dovrebbe utilizzare la porta 5010.
+- **Server Locale**: Per verificare il corretto funzionamento del sistema si è basato il tutto su il server 'localhost:5000' ,ovvero al localhost. Quindi si potevano visualizzare i risultati solamente se il server è in esecuzione sul dispsitivo stesso che si sta utilizzando. Quindi abbiamo a ogni gruppo un numero di porta riservato per l'avvio del server per fare in modo che il sito web sia accessibile anche da remoto. Il nostro dovrebbe utilizzare la porta 5010.
 
 ## Realizzatori
 
