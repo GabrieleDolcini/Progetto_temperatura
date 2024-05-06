@@ -27,7 +27,7 @@ Il raggiungimento degli obiettivi del progetto è stato suddiviso nei seguenti p
 
 3. **Configurazione Hardware**: Collegamento del sensore DHT22 all'ESP32 e programmazione dell'ESP32 per acquisire i dati di temperatura e umidità.
 
-4.**Aggiunta di bootstrap**: Implementazione della libreria bootstrap nell'interfaccia Web  
+4. **Aggiunta di bootstrap**: Implementazione della libreria bootstrap nell'interfaccia Web  
 
 5. **Test e Ottimizzazione**: Verifica del corretto funzionamento dell'intero sistema, inclusi il sensore DHT22, l'ESP32, il server Flask e l'interfaccia web. Ottimizzazione del codice e risoluzione di eventuali problemi riscontrati durante i test.
 
@@ -45,34 +45,31 @@ Il progetto comprende diversi componenti:
 
 Il progetto è organizzato nei seguenti file:
 
-1. **`index.html`**: Questo file contiene la struttura HTML per l'interfaccia web che visualizza i dati di temperatura.
+1. **`index.html`**: Questo file contiene la struttura HTML per l'interfaccia web che visualizza i dati di temperatura. 
+[Link del file](index.html)
 
 2. **`style.css`**: Il file CSS definisce lo stile dell'applicazione web per renderla più accattivante e leggibile.
+[Link del file](style.css)
 
 3. **`main.js`**: Questo file contiene il codice JavaScript per caricare dinamicamente i dati di temperatura nella tabella dell'interfaccia web.
+[Link del file](main.js)
 
-4. **`app.py`**: Questo file Python implementa il server Flask che gestisce le richieste HTTP per aggiungere nuove misurazioni di temperatura e restituire i dati al client.
+4. **`serverdati.py`**: Questo file Python implementa il server Flask che gestisce le richieste HTTP per aggiungere nuove misurazioni di temperatura e restituire i dati al client.
+[Link del file](serverdati.py)
 
 5. **`dati.csv`**: Il file CSV contiene i dati di temperatura registrati, memorizzati secondo il formato: `ID, Aula, Giorno, Ora, Temperatura`.
+[Link del file](dati.csv)
 
-6. **`main.ino`**: Questo file contiene il codice Arduino IDE che viene caricato sull'ESP32 per acquisire e inviare i dati di temperatura al server Flask.
+6. **`rilevazione_temperatura.ino`**: Questo file contiene il codice Arduino IDE che viene caricato sull'ESP32 per acquisire e inviare i dati di temperatura al server Flask.
+[Link del file](arduino/rilevazione_temperature.ino)
 
-## Istruzioni per l'Utilizzo
-
-1. **Configurazione dell'ESP32**: Carica il codice `main.ino` sull'ESP32 utilizzando l'Arduino IDE. Assicurati di configurare correttamente il nome della rete WiFi (`ssid`) e la relativa password (`wifipw`).
-
-2. **Avvio del Server Flask**: Esegui il file `app.py` per avviare il server Flask. Assicurati che tutte le dipendenze siano installate correttamente.
-
-3. **Accesso all'Interfaccia Web**: Una volta che il server Flask è in esecuzione, apri un browser web e vai all'indirizzo `http://localhost:5000` per visualizzare l'interfaccia web.
-
-4. **Monitoraggio delle Temperature**: L'interfaccia web mostrerà una tabella con le temperature registrate nelle varie aule della scuola. Le nuove misurazioni saranno aggiunte automaticamente all'interfaccia web quando l'ESP32 invia i dati al server Flask.
 
 ## Conclusioni
 Le principali conclusioni del progetto includono:
 
 - **Affidabilità del Sistema**: Il sistema implementato si è dimostrato affidabile nel rilevare e registrare le variazioni di temperatura all'interno delle aule scolastiche.
 - **Utilità dei Dati Raccolti**: I dati di temperatura raccolti possono essere utilizzati per valutare il comfort termico degli studenti e adottare eventuali misure correttive per migliorare l'ambiente di apprendimento.
-- **Possibilità di Miglioramento**: Nonostante il successo del progetto, ci sono ancora aree di miglioramento possibili, come l'aggiunta di funzionalità avanzate all'interfaccia web (come la ricerca specifica di misurazioni nella tabella).
+- **Possibilità di Miglioramento**: Nonostante il successo del progetto, ci sono ancora aree di miglioramento possibili, come l'aggiunta di funzionalità avanzate all'interfaccia web (come la ricerca specifica di misurazioni nella tabella). Inoltre la misurazione delle temperature avviene per un intervallo di temppo definoto nel file 'rilevazioni_temperature.ino'
 
 ## Realizzatori
 
