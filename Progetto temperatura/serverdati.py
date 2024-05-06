@@ -34,23 +34,26 @@ def index():
 
 @app.route("/add")
 def add():
-
-    # recupera i dati
     query_parameters = request.args
-
     aula = query_parameters.get("aula")
     valore = query_parameters.get("valore")
     
-    #scrivi i dati su file
+    # Legge l'ultimo ID dal file CSV
+    ultimo_id = 0
+    with open(csv_file_path, newline='') as csvfile:
+        csv_reader = csv.reader(csvfile)
+        for row in csv_reader:
+            ultimo_id = int(row[0])
+    
+  
     current_date = dt.date.today()
-    current_time = time.strftime("%H:%M",time.localtime())
+    current_time = time.strftime("%H:%M", time.localtime())
 
-    f = open("dati.csv","a")
-    f.write("\n10,")
-    f.write(aula+",")
-    f.write(str(current_date)+",")
-    f.write(str(current_time)+",")
-    f.write(valore)
-    f.close()
+    with open("dati.csv", "a", newline='') as csvfile:
+        if ultimo_id == 0:
+            csvfile.write("\n1," + aula + "," + str(current_date) + "," + str(current_time) + "," + valore)
+        else:
+            csvfile.write("\n" + str(ultimo_id + 1) + "," + aula + "," + str(current_date) + "," + str(current_time) + "," + valore)
 
-    return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
+    return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+
