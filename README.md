@@ -30,22 +30,6 @@ Il raggiungimento degli obiettivi del progetto è stato suddiviso nei seguenti p
 4. **Aggiunta di bootstrap**: Implementazione della libreria bootstrap nell'interfaccia Web  
 
 5. **Test e Ottimizzazione**: Verifica del corretto funzionamento dell'intero sistema, inclusi il sensore DHT22, l'ESP32, il server Flask e l'interfaccia web. Ottimizzazione del codice e risoluzione di eventuali problemi riscontrati durante i test.
-   
-    +-------------------+         +-------------------+       +-------------------+
-    |                   |  HTTP   |                   |  CSV  |                   |
-    |    ESP32 (DHT22)  +-------->+   Server Flask    +------->  File CSV (dati) |
-    |                   |         |                   |       |                   |
-    +-------------------+         +-------------------+       +-------------------+
-                                           ^
-                                           |
-                                           |
-                                           |
-                                           v
-                                  +-------------------+
-                                  |                   |
-                                  | Applicazione Web  |
-                                  |                   |
-                                  +-------------------+
 
 ## Contenuti del Progetto
 
