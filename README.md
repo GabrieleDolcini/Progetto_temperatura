@@ -3,8 +3,8 @@
 ## Sommario
 
 - [Introduzione e Obiettivi](#introduzione-e-obiettivi)
-- [Metodologia](#metodologia)
 - [Contenuti del progetto](#contenuti-del-progetto)
+- [Sviluppo](#sviluppo)
 - [Struttura dei file](#struttura-dei-file)
 - [Conclusioni](#conclusioni)
 - [Realizzatori](#realizzatori)
@@ -27,7 +27,7 @@ Il progetto comprende diversi componenti:
 
 3. **Applicazione Web**: Un'interfaccia web è stata sviluppata utilizzando HTML, CSS e JavaScript per visualizzare i dati di temperatura registrati in forma di tabella. Questa interfaccia fornisce informazioni utili per monitorare le variazioni di temperatura all'interno delle aule scolastiche.
 
-## Metodologia
+## Sviluppo
 
 Il raggiungimento degli obiettivi del progetto è stato suddiviso nei seguenti passaggi:
 
