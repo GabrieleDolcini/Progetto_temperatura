@@ -21,7 +21,7 @@ Questo progetto si propone di monitorare e registrare le temperature all'interno
 
 Il raggiungimento degli obiettivi del progetto è stato suddiviso nei seguenti passaggi:
 
-1. **Sviluppo dell'Interfaccia Web**: Creazione di un'interfaccia web utilizzando HTML, CSS e JavaScript per visualizzare i dati di temperatura in forma tabellare
+1. **Sviluppo dell'Interfaccia Web**: Creazione di un'interfaccia web utilizzando HTML, CSS e JavaScript per visualizzare i dati di temperatura in forma tabellare,
 
 2. **Implementazione del Server Flask**: Creazione di un server Flask in grado di gestire le richieste HTTP provenienti dall'ESP32 per aggiungere nuove misurazioni di temperatura e restituire i dati al client.
 
@@ -39,7 +39,7 @@ Il progetto comprende diversi componenti:
 
 2. **Server Flask**: Un server Flask è implementato per gestire le richieste HTTP provenienti dall'ESP32 e memorizzare i dati di temperatura in un file CSV.
 
-3. **Applicazione Web**: Un'interfaccia web è stata sviluppata utilizzando HTML, CSS e JavaScript per visualizzare i dati di temperatura registrati in forma tabellare. Questa interfaccia fornisce informazioni utili per monitorare le variazioni di temperatura all'interno delle aule scolastiche.
+3. **Applicazione Web**: Un'interfaccia web è stata sviluppata utilizzando HTML, CSS e JavaScript per visualizzare i dati di temperatura registrati in forma di tabella. Questa interfaccia fornisce informazioni utili per monitorare le variazioni di temperatura all'interno delle aule scolastiche.
 
 ## Struttura dei File
 
@@ -51,7 +51,7 @@ Il progetto è organizzato nei seguenti file:
 2. **`style.css`**: Il file CSS definisce lo stile dell'applicazione web per renderla più accattivante e leggibile.
 [Link del file](Progetto%20temperatura/css/style.css)
 
-3. **`main.js`**: Questo file contiene il codice JavaScript per caricare dinamicamente i dati di temperatura nella tabella dell'interfaccia web.
+3. **`main.js`**: Questo file contiene il codice JavaScript per caricare dinamicamente i dati di temperatura nella tabella dell'interfaccia web. Qui viene effettuato il fetch che permette la lettura e inserimento dei dati nel file HTML.
 [Link del file](Progetto%20temperatura/js/main.js)
 
 4. **`serverdati.py`**: Questo file Python implementa il server Flask che gestisce le richieste HTTP per aggiungere nuove misurazioni di temperatura e restituire i dati al client.
@@ -61,7 +61,7 @@ Il progetto è organizzato nei seguenti file:
 [Link del file](Progetto%20temperatura/dati.csv)
 
 6. **`rilevazione_temperatura.ino`**: Questo file contiene il codice Arduino IDE che viene caricato sull'ESP32 per acquisire e inviare i dati di temperatura al server Flask.
-[Link del file](Progetto%20temperatura/arduino/rilevazione_temperature.ino)
+[Link del file](Progetto%20temperatura/arduino/rilevazione_temperatura.ino)
 
 
 ## Conclusioni
@@ -70,6 +70,7 @@ Le principali conclusioni del progetto includono:
 - **Affidabilità del Sistema**: Il sistema implementato si è dimostrato affidabile nel rilevare e registrare le variazioni di temperatura all'interno delle aule scolastiche.
 - **Utilità dei Dati Raccolti**: I dati di temperatura raccolti possono essere utilizzati per valutare il comfort termico degli studenti e adottare eventuali misure correttive per migliorare l'ambiente di apprendimento.
 - **Possibilità di Miglioramento**: Nonostante il successo del progetto, ci sono ancora aree di miglioramento possibili, come l'aggiunta di funzionalità avanzate all'interfaccia web (come la ricerca specifica di misurazioni nella tabella). Inoltre la misurazione delle temperature avviene per un intervallo di temppo definoto nel file 'rilevazioni_temperature.ino'
+- **Server Locale**: Per verificare il corretto funzionamento del sistema si è basato il tutto su il server "http://localhost:5000" ,ovvero al localhost. Quindi si potevano visualizzare i risultati solamente se il server è in esecuzione sul dispsitivo stesso che si sta utilizzando. Quindi abbiamo a ogni gruppo un numero di porta riservato per l'avvio del server. Il nostro dovrebbe utilizzare la porta 5010.
 
 ## Realizzatori
 
