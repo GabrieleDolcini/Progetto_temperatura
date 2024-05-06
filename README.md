@@ -46,22 +46,22 @@ Il progetto comprende diversi componenti:
 Il progetto è organizzato nei seguenti file:
 
 1. **`index.html`**: Questo file contiene la struttura HTML per l'interfaccia web che visualizza i dati di temperatura. 
-[Link del file](index.html)
+[Link del file](Progetto%20temperatura/index.html)
 
 2. **`style.css`**: Il file CSS definisce lo stile dell'applicazione web per renderla più accattivante e leggibile.
-[Link del file](style.css)
+[Link del file](Progetto%20temperatura/css/style.css)
 
 3. **`main.js`**: Questo file contiene il codice JavaScript per caricare dinamicamente i dati di temperatura nella tabella dell'interfaccia web.
-[Link del file](main.js)
+[Link del file](Progetto%20temperatura/js/main.js)
 
 4. **`serverdati.py`**: Questo file Python implementa il server Flask che gestisce le richieste HTTP per aggiungere nuove misurazioni di temperatura e restituire i dati al client.
-[Link del file](serverdati.py)
+[Link del file](Progetto%20temperatura/serverdati.py)
 
 5. **`dati.csv`**: Il file CSV contiene i dati di temperatura registrati, memorizzati secondo il formato: `ID, Aula, Giorno, Ora, Temperatura`.
-[Link del file](dati.csv)
+[Link del file](Progetto%20temperatura/dati.csv)
 
 6. **`rilevazione_temperatura.ino`**: Questo file contiene il codice Arduino IDE che viene caricato sull'ESP32 per acquisire e inviare i dati di temperatura al server Flask.
-[Link del file](arduino/rilevazione_temperature.ino)
+[Link del file](Progetto%20temperatura/arduino/rilevazione_temperature.ino)
 
 
 ## Conclusioni
