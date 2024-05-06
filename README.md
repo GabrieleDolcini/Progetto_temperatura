@@ -17,6 +17,16 @@ Questo progetto si propone di monitorare e registrare le temperature all'interno
 2. Memorizzazione delle misurazioni di temperatura in un file CSV tramite un server Flask.
 3. Visualizzazione dei dati di temperatura registrati tramite un'interfaccia web.
 
+## Contenuti del Progetto
+
+Il progetto comprende diversi componenti:
+
+1. **ESP32 con Sensore DHT22**: Il microcontrollore ESP32 è utilizzato per acquisire i dati di temperatura e umidità all'interno delle aule della scuola tramite il sensore DHT22.
+
+2. **Server Flask**: Un server Flask è implementato per gestire le richieste HTTP provenienti dall'ESP32 e memorizzare i dati di temperatura in un file CSV.
+
+3. **Applicazione Web**: Un'interfaccia web è stata sviluppata utilizzando HTML, CSS e JavaScript per visualizzare i dati di temperatura registrati in forma di tabella. Questa interfaccia fornisce informazioni utili per monitorare le variazioni di temperatura all'interno delle aule scolastiche.
+
 ## Metodologia
 
 Il raggiungimento degli obiettivi del progetto è stato suddiviso nei seguenti passaggi:
@@ -31,15 +41,6 @@ Il raggiungimento degli obiettivi del progetto è stato suddiviso nei seguenti p
 
 5. **Test e Ottimizzazione**: Verifica del corretto funzionamento dell'intero sistema, inclusi il sensore DHT22, l'ESP32, il server Flask e l'interfaccia web. Ottimizzazione del codice e risoluzione di eventuali problemi riscontrati durante i test.
 
-## Contenuti del Progetto
-
-Il progetto comprende diversi componenti:
-
-1. **ESP32 con Sensore DHT22**: Il microcontrollore ESP32 è utilizzato per acquisire i dati di temperatura e umidità all'interno delle aule della scuola tramite il sensore DHT22.
-
-2. **Server Flask**: Un server Flask è implementato per gestire le richieste HTTP provenienti dall'ESP32 e memorizzare i dati di temperatura in un file CSV.
-
-3. **Applicazione Web**: Un'interfaccia web è stata sviluppata utilizzando HTML, CSS e JavaScript per visualizzare i dati di temperatura registrati in forma di tabella. Questa interfaccia fornisce informazioni utili per monitorare le variazioni di temperatura all'interno delle aule scolastiche.
 
 ## Struttura dei File
 
